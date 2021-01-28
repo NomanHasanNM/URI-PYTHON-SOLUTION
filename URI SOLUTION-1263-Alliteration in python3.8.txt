@@ -1,0 +1,21 @@
+from typing import List
+
+while True:
+    try:
+        moni: List[str] = []
+        moni = (input().lower()).split()
+        m = 0
+        n = 0
+        for i, j in enumerate(moni):
+            moni[i] = j[0]
+            if moni[i] == moni[i - 1] and n == 0:
+                n = 1
+                m += 1
+            elif moni[i] != moni[i - 1]:
+                n = 0
+
+        print(m)
+
+
+    except EOFError:
+        break
