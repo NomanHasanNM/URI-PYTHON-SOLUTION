@@ -1,0 +1,5 @@
+value = input()
+men, women = value.split(" ")
+operation = (((float(women) - float(men)) * 100.00) / float(men))
+need = float(operation)
+print("{0:.2f}%".format(need))
